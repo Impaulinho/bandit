@@ -1,1 +1,8 @@
 level 16 cluFn7wTiGryunymYOu4RcffSxQluehd
+
+level 17
+	nmap localhost -p31000-32000
+	echo "cluFn7wTiGryunymYOu4RcffSxQluehd" | openssl s_client -connect localhost:31790 -ign_eof 2>/dev/null | grep -A 100 ".BEGIN RSA PRIVATE KEY." > /tmp/17.key
+        ssh bandit17@localhost -i /tmp/17.key
+
+level 18
