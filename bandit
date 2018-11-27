@@ -33,4 +33,9 @@ NOTE: Try connecting to your own network daemon to see if it works as you think
 
 FROM STRINGS TO THE BIN: Usage: %s <portnumber>
 This program will connect to the given port on localhost using TCP. If it receives the correct password from the other side, the next password is transmitted back.
-	
+       
+       	SOLUTION
+	using 2 terminals, in one of them open a random port on listening mode using nc and send level 20 password as standard input, in the other terminal connect to the random port. 
+	nc -l -t  localhost -p 3333
+	./suconnect 3333
+
